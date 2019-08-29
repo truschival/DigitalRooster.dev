@@ -1,8 +1,8 @@
-.news  link {
-	border: 90;
-	height: 200%;
-	left: 100;
-	position: absolute;
-	top: 90;
-	width: 100%;
+#footer .copyright li {
+    border-left: solid 1px rgba(212, 212, 255, 0.3);
+    color: rgba(240, 240, 255, 0.8);
+    display: inline-block;
+    line-height: 1;
+    margin-left: 1em;
+    padding-left: 1em;
 }
