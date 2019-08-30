@@ -2,7 +2,7 @@
 title: "DigitalRooster"
 date: 2019-08-27T13:37:19+02:00
 description: "Why, What and How"
-image: pic10.jpg
+image: demo_on_hardware.jpg
 keywords: "overview"
 categories:
     - "overview"
@@ -10,7 +10,7 @@ draft: false
 ---
 
 Welcome to DigitalRooster, the Radio Alarmclock that doesn't suck, or if it does
-you are able to improve it.
+__you__ are able to improve it.
 
 # Why
 
@@ -31,7 +31,7 @@ podcast urls and radio stations. I would love to hack my Auna and the
 software... but it turns out you can't (at least not easily).
 
 It was time to create DigitalRooster. And it was the __perfect chance to learn__
-a lot about electronics, CAD, 3D Printing and to get to learn QML.
+a lot about electronics, CAD, 3D-printing and to get to learn QML.
 
 # What
 
@@ -45,12 +45,25 @@ change the volume than fiddling with virtual sliders on a touch display.  So the
 hardware got a fancy Grayhill rotary encoder with push button and a touch
 display (capacitive). See more in the [hardware](/pages/hardware) section.
 
-# How
-
 First the core functionality of DigitalRoosterGui was developed running on
 Debian GNU/Linux and Microsoft Windows as a library that could be tested
 independently. The QML GUI came next.
 
 Porting it to embedded Linux with Buildroot on Raspberry Pi was relatively easy.
 I had past experience with board support packages and buildroot from previous
-projects.
+projects. Playing around with Raspberry Pi Zero W using framebuffer copy (fbcp)
+the performance was o.k. but not overwhelming. I am working on a port to 
+Banana Pi M2 Zero with quad-core CPU and a MALI GPU. On Mali/Lima there are 
+some quirks with QT shaders but we will figure it out.
+
+__I think it is mature enough to share it with *you*__ 
+
+# How
+
+Look at the section [software](pages/software) and clone the main project from
+[github](https://github.com/truschival/DigitalRoosterGui) you can build the project
+on your host PC. If you like what you see look at the [hardware](/pages/hardware) 
+and run it on your Raspberry Pi.
+
+If you are not into coding look in the the section [contributing](/pages/contributing) 
+there are plenty of ways of collaboration.

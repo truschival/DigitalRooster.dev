@@ -43,7 +43,6 @@ speakers.
 I am working on (my first) design of an extension PCB with three audio channels,
 integrated RTC, I2C PWM driver for backlight and possible LED illumination.
 This will also remedy the caveats and should work on Raspberry Pi and Banana Pi.
-Here is the first version of the schematics - not tested, stay tuned.
 
 ## Casing
 

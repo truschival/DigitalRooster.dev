@@ -4,10 +4,10 @@ date: 2019-08-27T13:26:26+02:00
 description: "Contributing to DigitalRooster"
 slug: "contributing"
 image: pic10.jpg
-keywords: ""
+keywords: "contributing"
 categories: 
-    - ""
-    - ""
+    - "contributing"
+    - "software"
 draft: false
 ---
 
@@ -18,25 +18,27 @@ bug or feature request, write documentation, design a extension circuit board or
 nicer case. There are many opportunities for everyone to contribute - The
 project needs you!
 
-* File a Bug
-* File a feature request
-* Submit code for a feature or bugfix
-* Modify code
-* write documentation
-* write tests
-* port it to other hardware
-* add your own program to run on the DigitalRooster system
-* ... make the thing better
+*  File a Bug
+*  File a feature request
+*  Submit code for a feature or bugfix
+*  Make this ugly website look professional
+*  Modify code
+*  write documentation
+*  write tests
+*  port it to other hardware
+*  add your own program to run on the DigitalRooster system
+*  ... make the thing better
 
 ## Contributing to existing code
 
 The easiest way to contribute is to create a github pullrequest against the
 develop branch of the subprojects.
 
--  [DigitalRoosterGui](https://github.com/truschival/DigitalRoosterGui) : QML-Application
--  [DigitalRoosterREST](https://github.com/truschival/DigitalRooster_REST) : a quickhack OpenAPI webservice to
+*  [DigitalRoosterGui](https://github.com/truschival/DigitalRoosterGui) : QML-Application
+*  [DigitalRoosterREST](https://github.com/truschival/DigitalRooster_REST) : a quickhack OpenAPI webservice to
    configure DigitalRoosterGui (this needs professional attention!) 
--  [Buildroot external](https://github.com/truschival/buildroot_digitalrooster) : to build the embedded linux for your hardware.
+*  [DigitalRooster.dev](https://github.com/truschival/DigitalRooster.dev) : Source of this website
+*  [Buildroot external](https://github.com/truschival/buildroot_digitalrooster) : to build the embedded linux for your hardware.
 
 It is a good idea to open an issue in the respective project beforehand to share
 the idea.
@@ -51,13 +53,12 @@ right and will to publish it under DigitalRoosters license [GPLv3](https://www.g
 
 In other words:
 
--  Don't steal code from your friends and pretend it's
+*  Don't steal code from your friends and pretend it's
    yours - that's unethical
--  Don't copy-paste/steal proprietary (patented) code from your
+*  Don't copy-paste/steal proprietary (patented) code from your
    company - that's illegal
--  If you write code for DigitalRooster on your employers time make sure the 
+*  If you write code for DigitalRooster on your employers time make sure the 
    company is o.k. with your work being 'highly contageous' GPLv3 copyleft code.
-
 
 ## Create new projects
 

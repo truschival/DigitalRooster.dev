@@ -13,12 +13,12 @@ theme = "forty"
 
   # Provide your metadata here.
   name = "Thomas Ruschival"
-  description = "A hackable alarm clock, podcast player and internet radio"
+  description = "Your hackable alarm clock, podcast player and internet radio"
 
   # Link custom assets relative to /static
   custom_css = ["custom.css"]
   custom_js  = []
-  favicon    = "favicon.ico"
+  favicon    = "digitalrooster.ico"
 
   # Just a custom image variable, please define it in .md files for content.
   image = ""
@@ -31,10 +31,10 @@ theme = "forty"
   # Navigation Section
   [params.navigation]
     title = "DigitalRooster"
-    subtitle = ""
+    subtitle = "Navigate"
     menu = "Menu"
     # Optional logo as brand stored in img/
-    #logo = "software_icon.png"
+    logo = "digital_rooster_low_poly.svg"
 
     [[params.navigation.links]]
       name = "Home"
@@ -82,9 +82,8 @@ theme = "forty"
     # To change the background image on the homepage banner, replace 'banner.jpg' in
     # the 'static/img' folder.
     title = "This is DigitalRooster"
-    subtitle = "the hackable alarm clock, internet radio, podcast player or whatever else you want it to be!"
+    subtitle = "Your hackable alarm clock, internet radio, podcast player or whatever else you want it to be!"
     buttonText = "Get Started"
-	url = "pages/main"
 
   # Tiles Section
   [params.tiles]
