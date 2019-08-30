@@ -1,5 +1,5 @@
 languageCode = "en-us"
-title = "TestSite"
+title = "DigitalRooster"
 baseurl = "http://digitalrooster.dev/"
 theme = "forty"
 
@@ -13,7 +13,7 @@ theme = "forty"
 
   # Provide your metadata here.
   name = "Thomas Ruschival"
-  description = "Author of DigitalRooster"
+  description = "A hackable alarm clock, podcast player and internet radio"
 
   # Link custom assets relative to /static
   custom_css = ["custom.css"]
