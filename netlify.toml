@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "hugo --gc --minify --enableGitInfo -t forty -b https://wwww.digitalrooster.dev"
+command = "hugo --gc --minify --enableGitInfo -t forty -b https://www.digitalrooster.dev"
 
 [context.production.environment]
 HUGO_VERSION = "0.57.2"
