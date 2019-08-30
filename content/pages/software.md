@@ -2,7 +2,7 @@
 title: "Software"
 date: 2019-08-27T13:37:19+02:00
 description: "What's inside"
-image: pic10.jpg
+image: software.jpg
 keywords: "software"
 categories:
     - "software"

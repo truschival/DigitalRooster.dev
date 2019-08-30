@@ -9,7 +9,7 @@ categories:
 draft: false
 ---
 
-Welcome to DigitalRooster, the Radio Alarmclock that doesn't suck, or if it does
+DigitalRooster the Radio Alarmclock that doesn't suck, or if it does
 __you__ are able to improve it.
 
 # Why
@@ -17,18 +17,20 @@ __you__ are able to improve it.
 First and most important - **because it is fun!**
 
 Did you ever buy a product you really loved for its specs and features and after
-some time you found something is missing or doesn't feel right?
+some time you found something is missing or doesn't feel right? - Well, so did I.
 
-So did I. Ten years ago I got a Terratec Noxon iRadio Cube digital alarm clock
-with internet radio and UPNP player. A great gadget, unfortunately it died :(
-Even worse Terratec went out of business and does no longer maintain software.
-I had to find a replacement.
+Ten years ago I got a Terratec Noxon iRadio Cube digital alarm clock with
+internet radio and UPNP player. A great gadget, unfortunately it died :( Even
+worse - Terratec went out of business and does no longer maintain software.  I
+had to find a replacement.
 
-After some research I got an Auna Radio Gaga. The sound quality is amazing for a
-alarm clock, it can play FM Radio, DAB+, internet streams and podcasts using
-digital frontier radio service - really neat features but I missed adding other
-podcast urls and radio stations. I would love to hack my Auna and the
-software... but it turns out you can't (at least not easily).
+After some research I got an 
+[Auna Radio Gaga](https://www.auna.de/Radios/Internetradios/Radio-Gaga-Internetradio-WLAN-LAN-DAB-DAB-UKW-USB-AUX-schwarz-Schwarz.html). 
+The sound quality is amazing for a alarm clock, it can play FM Radio, DAB+,
+internet streams and podcasts using digital frontier radio service - really neat
+features but I missed adding other podcast urls and radio stations. I would love
+to hack my Auna and the software... but it turns out you can't (at least not
+easily).
 
 It was time to create DigitalRooster. And it was the __perfect chance to learn__
 a lot about electronics, CAD, 3D-printing and to get to learn QML.
@@ -60,7 +62,7 @@ __I think it is mature enough to share it with *you*__
 
 # How
 
-Look at the section [software](pages/software) and clone the main project from
+Look at the section [software](/pages/software) and clone the main project from
 [github](https://github.com/truschival/DigitalRoosterGui) you can build the project
 on your host PC. If you like what you see look at the [hardware](/pages/hardware) 
 and run it on your Raspberry Pi.

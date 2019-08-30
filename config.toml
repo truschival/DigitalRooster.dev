@@ -81,7 +81,7 @@ theme = "forty"
   [params.banner]
     # To change the background image on the homepage banner, replace 'banner.jpg' in
     # the 'static/img' folder.
-    title = "This is DigitalRooster"
+    title = "Welcome to DigitalRooster"
     subtitle = "Your hackable alarm clock, internet radio, podcast player or whatever else you want it to be!"
     buttonText = "Get Started"
 
