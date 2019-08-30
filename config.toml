@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "DigitalRooster"
-baseurl = "http://digitalrooster.dev/"
+baseurl = "http://www.digitalrooster.dev/"
 theme = "forty"
 
 [params]
