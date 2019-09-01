@@ -3,7 +3,6 @@ title: "Hardware"
 date: 2019-08-27T13:37:19+02:00
 description: "DigitalRooster Hardware"
 slug: "hardware"
-image: pic10.jpg
 keywords: "hardware"
 categories:
     - "hardware"
@@ -38,11 +37,18 @@ flying wire from the Pi to the backlight pad of the TFT - not the most
 professional way to deal with EMI issues but it remedies the noise on the
 speakers.
 
-### Intermediate upgrade plans
+## Upcoming hardware
 
 I am working on (my first) design of an extension PCB with three audio channels,
 integrated RTC, I2C PWM driver for backlight and possible LED illumination.
 This will also remedy the caveats and should work on Raspberry Pi and Banana Pi.
+
+<img src="/img/pages/Board3d.jpg" alt="new PCB"
+	title="new PCB" class="image small" />
+
+The schematics are done. The first layout was sent to
+[JLCPCB](https://jlcpcb.com) and the is on the way. But this won't help I
+realized some layout issues about an hour after placing the order...
 
 ## Casing
 

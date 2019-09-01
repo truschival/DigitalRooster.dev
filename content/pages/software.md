@@ -27,6 +27,11 @@ you think I have no clue about QT or QML - you are probably right! It was my
 first project and I learned a lot with it but I would like to continue learning
 from your professional hints - so tell me what can be improved and how!
 
+### Here are some screenshots
+
+![Main Screen](/img/pages/screenshot_main.png)
+![Podcasts](/img/pages/screenshot_podcasts.png)
+
 ## The Ingredients
 
 DigitalRooster consists of a few components: a linux kernel, device tree,
