@@ -98,13 +98,13 @@ theme = "forty"
     [[params.tiles.showcase]]
       title = "Software"
       subtitle = "What's inside"
-      image = "pic01.jpg"
+      image = "coding_small.jpg"
       url = "pages/software"
 
     [[params.tiles.showcase]]
       title = "Hardware"
       subtitle = "The tangible DigitalRooster"
-      image = "pic02.jpg"
+      image = "hardware_pcb.jpg"
       url = "pages/hardware"
 
     [[params.tiles.showcase]]

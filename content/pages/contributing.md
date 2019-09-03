@@ -3,7 +3,6 @@ title: "How to contribute"
 date: 2019-08-27T13:26:26+02:00
 description: "Contributing to DigitalRooster"
 slug: "contributing"
-image: pic10.jpg
 keywords: "contributing"
 categories: 
     - "contributing"
