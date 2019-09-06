@@ -15,13 +15,13 @@ living without open source software.
 
 DigitalRooster is open source software licensed under the
 [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html). The software runs on
-GNU/Linux and is built using [buildroot](https://buildroot.org/). This means
-everyone can see the source and change it to meet their expectations.
-DigitalRooster's features are far from perfect and most people have their own
-idea of perfect anyway.
+GNU/Linux and Windows. This means everyone can see the source and change it to
+meet their expectations.
 
 [__I encourage you to do so__! Go ahead and fix/adapt/change DigitalRooster!](/pages/contributing)
 
+DigitalRooster's features are far from perfect and most people have their own
+idea of perfect anyway.
 If you find a bug file a ticket, or even better file a ticket and fix it.  If
 you think I have no clue about QT or QML - you are probably right! It was my
 first project and I learned a lot with it but I would like to continue learning
@@ -39,7 +39,7 @@ libraries, QT and last but not least the graphical interface DigitalRoosterGUI.
 It is built using buildroot. Buildroot makes it easy to create a root file
 system for an SD-card for your DigitalRooster.
 
-### DigitalRoosterGui
+### DigitalRoosterGui (PC and Embedded)
 
 The graphical user interface. You can play around with most functionality on
 your host computer. To build and run DigitalRoosterGui you need:
@@ -50,24 +50,21 @@ your host computer. To build and run DigitalRoosterGui you need:
 4. A recent C++ compiler gcc or Microsoft VisualStudio
 
 Follow the [Readme.md](https://github.com/truschival/DigitalRoosterGui/blob/develop/README.md)
-for host-builds
+for host-builds.
 
+### Embedded Target
 
-### Buildroot distribution
+If you want to run it on your Raspberry Pi you can compile it on the target
+using a Raspian image following the steps for host builds.
 
-[Buildroot](https://buildroot.org/) provides the infrastructure like
-cross-compiler and required 3rd party components such as QT. 
+If you want to create a root filesystem for your target you can do that easily
+using [Buildroot](https://buildroot.org/) that provides the infrastructure like
+cross-compiler and required 3rd party components such as QT.  Buildroot
+distribution does not include DigitalroosterGui or configurations. This
+specialization is provided by a modular extension to buildroot called
+[Buildroot external](https://github.com/truschival/buildroot_digitalrooster). It
+adds the DigitalRoosterGui package, target-hardware specific configurations and
+patches to other packages.
 
-### Digitalrooster Buildroot external
-
-[Buildroot external](https://github.com/truschival/buildroot_digitalrooster)
- provides our custom extensions to the buildroot base. It adds the
- DigitalRoosterGui package, target-hardware specific configurations and patches
- to other packages.
- 
-  
- ## Putting it all together
- 
- Creating a root file system for an SD-Card is described in the
- [Readme.md](https://github.com/truschival/buildroot_digitalrooster/blob/master/Readme.md)
- 
+Creating a root file system for an SD-Card is described in the
+[Readme.md](https://github.com/truschival/buildroot_digitalrooster/blob/master/Readme.md)

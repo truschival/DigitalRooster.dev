@@ -58,14 +58,21 @@ the performance was o.k. but not overwhelming. I am working on a port to
 Banana Pi M2 Zero with quad-core CPU and a MALI GPU. On Mali/Lima there are 
 some quirks with QT shaders but we will figure it out.
 
+At the moment I am working on an extension circuit board that will combine all
+audio DAC, amplifier, realtime clock and some PWM on one board. If the hardware
+works and can be produced at a reasonalble price I intend to make it available
+to you. Stay tuned.  In the mean time tou can already build your own
+DigitalRooster with components available from Adafruit.
+
 __I think it is mature enough to share it with *you*__ 
 
 # How
 
 Look at the section [software](/pages/software) and clone the main project from
-[github](https://github.com/truschival/DigitalRoosterGui) you can build the project
-on your host PC. If you like what you see look at the [hardware](/pages/hardware) 
-and run it on your Raspberry Pi.
+[github](https://github.com/truschival/DigitalRoosterGui) you can build the
+project on your host PC. If you like what you see look at the
+[hardware](/pages/hardware) and run it on your Raspberry Pi.
 
-If you are not into coding look in the the section [contributing](/pages/contributing) 
-there are plenty of ways of collaboration.
+If you are not into coding look in the the section
+[contributing](/pages/contributing) there are plenty of ways of collaboration.
+
