@@ -18,7 +18,7 @@ theme = "forty"
   # Link custom assets relative to /static
   custom_css = ["custom.css"]
   custom_js  = []
-  favicon    = "digitalrooster.ico"
+  favicon    = "favicon.ico"
 
   # Just a custom image variable, please define it in .md files for content.
   image = ""
@@ -92,25 +92,25 @@ theme = "forty"
     [[params.tiles.showcase]]
       title = "Overview"
       subtitle = "Why, What and How"
-      image = "pic03.jpg"
+      image = "satellite_img.webp"
       url = "pages/main"
 
     [[params.tiles.showcase]]
       title = "Software"
       subtitle = "What's inside"
-      image = "coding_small.jpg"
+      image = "coding_small.webp"
       url = "pages/software"
 
     [[params.tiles.showcase]]
       title = "Hardware"
       subtitle = "The tangible DigitalRooster"
-      image = "hardware_pcb.jpg"
+      image = "hardware_pcb.webp"
       url = "pages/hardware"
 
     [[params.tiles.showcase]]
       title = "Contributing"
       subtitle = "How to contribute"
-      image = "pic01.jpg"
+      image = "contributing.webp"
       url = "pages/contributing"
 
   # Section Type Two
