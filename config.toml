@@ -182,6 +182,6 @@ theme = "forty"
 
     [[params.footer.quicklinks]]
       #text = "Privacy"
-      url= "pages/privacy"
+      url= "/pages/privacy"
       alt = "Privacy and data protection"
 
