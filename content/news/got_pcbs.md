@@ -25,19 +25,21 @@ THTs and solder jumpers that require soldering.
 Unfortunately even the best PCB manufacturer cant fix my layout errors - reading
 the datasheets and thinking for 5ct would have spared me some issues with the
 layout:
- 1. You should not run signals, especially clock lines, below the wires of
+
+-   Double check you schematics! Then check it again and let someone else look
+    at it! It turns out I connected I2C SCL to SDA on the RTC.
+-   You should not run signals, especially clock lines, below the wires of
     a crystal for the Real Time Clock. These crystals work at µW level and are
     sensitive to cross-talk.
- 2. You should read the datasheet of your RTC, if it says 6pF Load capacitance,
+-   You should read the datasheet of your RTC, if it says 6pF Load capacitance,
     buy a 6pF Crystal and not a 12pF Crystal.
+...and there are probably some more issues I haven't found yet.....
 
-and there are probably some more issues I haven't found yet.....
-
-All in all I payed 12US$ to learn the hard way to pay more attention.
-
-However I learned a lot with this failure. For instance it it not easy to solder
+All in all I payed 12US$ to learn the hard way to pay more attention.  Actually
+I learned a lot more with this failure. For instance it it not easy to solder
 SMD with solder paste and solder iron. Soldering with solder iron works better
-with wire.
+with wire. Also applying paste with a manual syringe and a stencil doesn't give
+the best solder paste print.
 
 <img src="/img/news/pcb_1_pre_oven.webp" alt="mountin SMD on a PCB by hand"
 	title="populating the PCB" class="image small" />
@@ -45,14 +47,14 @@ with wire.
 I made some experiments with my messed up half-way hand soldered board in the
 baking oven to calibrate the temperature and time and it works amazingly well!
 
-<img src="/img/news/pcb_1_in oven.webp" alt="a PCB in the baking oven"
-	title="in the oven" class="image small" />
-
 Preheat the oven to 205°C (or at least that what I can adjust with the turning
 knob). Put the PCB for 3:20 minutes and you get a reasonable result.  It didn't
 even kill the ICs, or at least not all of them. The I2C port expander MAX7315
 survived the procedure. I don't know if it was the heat, solder errors or layout
 mistakes but sound didn't work.
+<img src="/img/news/pcb_1_in_oven.webp" alt="a PCB in the baking oven"
+	title="in the oven" class="image small" />
 
+The result doesn't look so bad, does it?
 <img src="/img/news/pcb_1_assembled.webp" alt="oven soldered PCB"
 	title="the result" class="image small" />

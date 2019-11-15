@@ -1,13 +1,13 @@
 ---
-title: Travis updated Docker and broke my build :("
+title: Travis updated Docker and broke my build :(
 date:  2019-10-21T16:29:42+02:00
 description: ""
 summary: > 
-  CI/CD is great, docker avoids implicit dependencies - the build environment is stable, or not so much...
+  CI/CD is great, docker avoids implicit dependencies - the build environment 
+  is stable, or not so much...
   
- 
   Travis has updated the images and the images changed the Docker
-  Version from 17.09.0-ce to 18.06.0-ce. which brakes QT rcc builds :(
+  Version from 17.09.0-ce to 18.06.0-ce - which brakes QT rcc builds :(
 keywords: "news"
 categories: 
     - "news"
