@@ -15,9 +15,6 @@ layout but also to the schematics. I double checked my wiring and components,
 replaced the 5US$ Maxim DS1388 real time clock with a cheaper TI BQ32000 for
 2US$.
 
-<img src="/img/pages/DigitalRooster-Mk2a.webp" alt="rendering of red PCB"
-	title="second attempt pcb" class="image small" />
-
 Replaced THT components with SMD and sent it to
 [pcbway.com](https://www.pcbway.com) for quotation.  The BOM quotation is
 absolutely fair priced! The price is comparable to digikey for small numbers. At

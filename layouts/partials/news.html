@@ -8,21 +8,25 @@
             <p>{{ .Site.Params.News.subtitle }}</p>
         
 	{{" <!-- List of latest N news articles -->" | safeHTML }}
-        {{  with .Site.GetPage "news" "/news" }}{{ range first 2 .Pages.ByPublishDate.Reverse }}
+            {{  with .Site.GetPage "news" "/news" }}
+	    {{ range first 3 .Pages.ByPublishDate.Reverse }}
 		{{" <!-- a news article -->" | safeHTML }}
-		  <header >
-            <h4>{{.Date.Format "2006-01-02"}} : {{ .Title }} </h4>
-		  </header>
-
-          <p>{{ .Summary }}  {{" <!-- Summary -->" | safeHTML }} </br>
-			<a href="{{ .Permalink }}" class="button small">read more</a>
-		  </p>
-        {{end}}
-		{{end}}
-	{{" <!-- news article list end -->" | safeHTML }}
-    <ul class="actions">
-	  <li><a href="{{ .Site.Params.News.url | absURL}}" class="button next">{{ .Site.Params.News.buttonText }}</a></li>
-    </ul>
+	    <header >
+	      <h4>{{.Date.Format "2006-01-02"}} : {{ .Title }} </h4>
+	    </header>
+	    {{" <!-- Summary -->" | safeHTML }}
+            <p>{{ .Summary }}</br>
+		<a href="{{ .Permalink }}" class="button small">read more</a>
+	    </p>
+            {{end}}
+	{{end}}
+	    {{" <!-- news article list end -->" | safeHTML }}
+	    <ul class="actions">
+	      <li>
+		<a href="{{ .Site.Params.News.url | absURL}}" class="button next">
+		  {{ .Site.Params.News.buttonText }}</a>
+	      </li>
+	    </ul>
 	</div>		  
-	</section>
+    </section>
 {{" <!-- end news section -->" | safeHTML }}

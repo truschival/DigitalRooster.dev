@@ -1,0 +1,74 @@
+{{ "<!-- _default/list.html -->" | safeHTML }}
+<html>
+  {{ "<!-- Header -->" | safeHTML }}
+  {{ partial "header.html" . }}
+
+  <body>
+
+    {{ "<!-- Wrapper -->" | safeHTML }}
+    <div id="wrapper">
+
+      {{ partial "nav.html" . }}
+
+      {{ "<!-- Main -->" | safeHTML }}
+      <div id="main">
+
+        <section id="banner" class="style2">
+          <div class="inner">
+	    {{ if .Params.image }}
+            <span class="image">
+              <img src="{{ .Site.Params.baseURL }}/img/{{ .Params.image }}" alt="" />
+            </span>
+	    {{ end }}
+            <header class="major">
+              <h1>{{ .Title }}</h1>
+            </header>
+            <div class="content">
+              {{ .Content }}
+            </div>
+          </div>
+        </section>
+
+        <section id="two" class="spotlights">
+          {{ range .Pages }}
+          <section>
+            <div class="content">
+              <div class="inner">
+		<header >
+		  <h2>{{ .Title }} </h2>
+		</header>
+		{{" <!-- Summary -->" | safeHTML }}
+		  {{ if .Params.image }}
+		  <a href="{{ .Permalink }}" >
+		  <img src="{{ .Site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.image }}"
+		       alt="headline image"
+		       class="image article"  />
+		  </a>
+		  {{ end }}
+		  [{{.Date.Format "2006-01-02"}}]
+		  <div class="abstract">
+		    {{ .Summary }}
+		  </div>
+		{{" <!-- end Summary -->" | safeHTML }}
+		<ul class="actions">
+		  <a href="{{ .Permalink }}" class="button">read more</a>
+                </ul>
+		</div>
+            </div>
+          </section>
+          {{ end }}
+        </section>
+      </div>
+      
+      {{ "<!-- Footer -->" | safeHTML}}
+      {{ if .Site.Params.footer.enable }}
+      {{ partial "footer.html" . }}
+      {{ end }}
+      
+    </div>
+
+    {{ "<!-- Scripts -->" | safeHTML}}
+    {{ partial "js.html" . }}
+    
+  </body>
+</html>
