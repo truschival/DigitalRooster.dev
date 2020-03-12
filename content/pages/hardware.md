@@ -17,7 +17,7 @@ Currently DigitalRooster is built from these Components:
 * Long (15mm) 2.54mm connection header to stack the extension boards on the Raspberry Pi
   [(Digikey 3M156504-72-ND)](https://www.digikey.de/products/de?keywords=3M156504-72-ND)
 * Adafruit [PiTFT2.8" capacitive touch](https://learn.adafruit.com/downloads/pdf/adafruit-2-8-pitft-capacitive-touch.pdf)
-  [Digikey 1528-1423-ND](https://www.digikey.com/product-detail/en/adafruit-industries-llc/1983/1528-1423-ND/5699178)\
+  [(Digikey 1528-1423-ND)](https://www.digikey.com/product-detail/en/adafruit-industries-llc/1983/1528-1423-ND/5699178)\
   __Note:__ there are 2 types: with buttons (Mfg Part No. 2423) and without
   buttons (Mfg Part No. 1983). \
   I use the one without buttons
@@ -64,6 +64,10 @@ a wider choice of more powerful hardware!
 
 ## Casing
 
-The housing is printed on a Prusa MK3. You can find the STL-files here.  __Make
-sure you scale the housing with about 0.5%__ so the side panels fit in otherwise
-you will have problems mounting.
+<img src="/img/3D-CAD.webp" alt="3D CAD view of the Casing"
+	title="CAD view" class="image small" />
+
+The housing is printed on a Prusa MK3. You can find the
+[STL-files here](/parts-stl.7z). \
+__Make sure you scale the housing with about 0.5%__ so the side panels fit in
+otherwise you will have problems mounting.
