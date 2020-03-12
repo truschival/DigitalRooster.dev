@@ -45,6 +45,7 @@ speakers.
 ## Upcoming hardware DigitalRooster-MK3A
 
 The third prototype of an extension PCB will have:
+
 *   three audio channels with analog filters
     _way_ better sound
 *   a hardware shutdown line for the audio codecs so 'off' is really 'off' and
