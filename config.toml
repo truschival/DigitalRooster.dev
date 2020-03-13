@@ -205,15 +205,3 @@ theme = "forty"
       unsafe = true
       xHTML = false
 
-
-
-[[menu.main]]
-    name = "Section folder"
-    identifier = "sect"
-    url = "/section/"
-
-[[menu.main]]
-    name = "Sublevel topic"
-    parent = "sect"
-    identifier = "sub1"
-    url = "/section/folder1/"
