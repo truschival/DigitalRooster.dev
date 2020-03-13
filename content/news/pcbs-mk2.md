@@ -23,9 +23,9 @@ nothing to show later.
 Digitalrooster-MK2A had this problem with the shutdown circuit. To avoid popping
 noise of the MAX98357A audio codecs I came up with a low time delay filter that
 was intended to deassert the shutdown signal of the chips after a short delay
-when I2S bitclock was running.\\
+when I2S bitclock was running.\
 First it didn't really work because the delay was too short - this I fixed by
-increasing the capacitance of the low-pass.\\
+increasing the capacitance of the low-pass.\
 Second this entire circuit was not necessary. The
 [Linux driver for MAX98357A](https://www.kernel.org/doc/Documentation/devicetree/bindings/sound/max98357a.txt)
 includes support for a shutdown line. By sacrificing one GPIO I was able to
