@@ -185,3 +185,35 @@ theme = "forty"
       url= "/pages/privacy"
       alt = "Privacy and data protection"
 
+# New goldmark render settings for Hugo > 0.6
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xHTML = false
+
+
+
+[[menu.main]]
+    name = "Section folder"
+    identifier = "sect"
+    url = "/section/"
+
+[[menu.main]]
+    name = "Sublevel topic"
+    parent = "sect"
+    identifier = "sub1"
+    url = "/section/folder1/"
