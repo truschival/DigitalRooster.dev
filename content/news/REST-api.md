@@ -9,13 +9,14 @@ summary: >
   Alarms, Podcasts and Internet Radio stations.
   The API is specified according to the openapi spec 3.0. This means you can
   create client code automatically form the specification. Now some adapt and
-  motivate Front-End developer should take over and implement a nice web-gui...
+  motivate Front-End developer should take over and implement a nice web-gui!
+
 keywords:
-	- "REST"
-	- "Configuration"
+  - "REST"
+  - "Configuration"
 categories:
-    - "news"
-    - "software"
+  - "news"
+  - "software"
 ---
 
 Openapi really rocks. I have used it at work and it was the first time in my
