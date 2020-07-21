@@ -9,58 +9,110 @@ categories:
     - "electronics"
 draft: false
 ---
-## Electronics
 
-Currently DigitalRooster is built from these Components:
+The initial prototype was built using a Raspberry Pi Zero an Adafruit PiTFT and
+Speaker Bonnet plus some circuitry on a prototyping PCB. This works but had a
+range of serious drawbacks. For instance the Speaker Bonnet does not have a gpio
+connected to the shutdown pin of the codec which leads to a nasty popping noise
+when changing tracks. I also required some circuitry to adapt the voltage levels
+of the rotary encoder to 3.3V, I also wanted a real time clock.
 
-* Raspberry Pi Zero W (without soldered header)
-* Long (15mm) 2.54mm connection header to stack the extension boards on the Raspberry Pi
-  [(Digikey 3M156504-72-ND)](https://www.digikey.de/products/de?keywords=3M156504-72-ND)
-* Adafruit [PiTFT2.8" capacitive touch](https://learn.adafruit.com/downloads/pdf/adafruit-2-8-pitft-capacitive-touch.pdf)
-  [(Digikey 1528-1423-ND)](https://www.digikey.com/product-detail/en/adafruit-industries-llc/1983/1528-1423-ND/5699178)\
-  __Note:__ there are 2 types: with buttons (Mfg Part No. 2423) and without
-  buttons (Mfg Part No. 1983). \
-  I use the one without buttons
-* Adafruit [Speaker Bonnet with MAX98357 I2S amp](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-speaker-bonnet-for-raspberry-pi.pdf)
-  [(Digikey 1528-1819-ND)](https://www.digikey.de/products/de?keywords=1528-1819-ND) \
-  Wait for the upcoming hardware which will be _*awesome*_.
-* Grayhill rotary encoder [61C11-01-08-02](http://lgrws01.grayhill.com/web1/images/ProductImages/I-21-22.pdf)
-  [(Digikey GH6102-ND)](https://www.digikey.de/products/de?keywords= 61C11-01-08-02)
-* Kilo International knurled knob OEDNI-90-3-5
-  [(Digikey 226-4201-ND)](https://www.digikey.de/products/de?keywords=OEDNI-90-3-5)
+But most important: I have been an electrical engineer since 2008 but I have
+never designed a PCB this was my chance to learn electronic design!
 
-The total cost is about US$ 120 on digikey while the rotary encoder alone accounts
-for 25US$.
+## DigitalRooster-Mk3b extension board
 
-### Caveats
+<img src="/img/DigitalRooster-mk3b.webp" alt="3D Rendering of PCB assembly"
+	title="DigitalRooster-mk3b" class="image small" />
 
-The Raspberry Pi has few hardware PWM pins. One is used for SPI for the display,
-the other one I would like to use for Backlight control. Unfortunately the Pin
-is right next to the I2S pin for the speaker bonnet and may cause interference
-when connected through the speaker bonnet. As a quick fix I just cut the pin and
-soldered a flying wire from the Pi to the backlight pad of the TFT - not the
-most professional way to deal with EMI issues but it remedies the noise on the
-speakers.
+The hardware design started in 2019. I was ordering PCBs and imagined hand
+assembly for the prototypes. Not only was the design unnecessarily complicated,
+it also had a pretty bad layout and I had to admit my soldering skills do more
+damage than good. PCBWays turnkey assembly was the way to go. However I still
+needed two iterations to get what I wanted. Probably an experienced electronics
+hardware engineer would find many possibilities for improvement, especially for
+layout and component costs. But I am happy so far. With the Mk3b I finally got
+the board I wanted.  \
+I also think it is ready for mass production and to share
+it with you on tindie.com!
 
-## Upcoming hardware DigitalRooster-MK3A
+### Features
+-   Three Channel audio using a 3W MAX98357A I2S driver. Since this IC is a
+    Class-D amp I equipped the channels with passive LC filter to improve audio
+    quality. The left/right channels have a cut-off frequency of around 20kHz
+    while the mid channel filter is a 16kHz low-pass
 
-The third prototype of an extension PCB will have:
+-   a hardware shutdown line for the audio codecs so 'off' is really 'off' and
+    there is no popping noise when changing tracks
 
-*   three audio channels with analog filters
-    _way_ better sound
-*   a hardware shutdown line for the audio codecs so 'off' is really 'off' and
-    there is no popping noise when changing tracks turning on.
-*   Integrated Real Time Clock
-*   I2C PWM LED driver for back-light and possible LED illumination.
-    So you can wake up with a nice artificial sunrise next to your bed.
-*   external I2C connection with interrupt line to support e.g. APDS9660 gesture
-    and light sensor for dynamic back-light control and gesture snooze.
+-   A BQ32000 Real Time Clock chip with trickle-charge circuit that charges a
+    200mF SuperCap. Although the software synchronizes time using NTP I wanted a
+    Real Time Clock in case the network is down. Also having a the correct time
+    during boot makes logging a lot more insightful and avoids TLS error for
+    certificates that are not yet valid on Jan 1st of 1970...
 
-This will also be compatible with both Raspberry Pi _and_ Banana Pi. So you have
-a wider choice of more powerful hardware!
+-   A TLC59208F PWM LED driver for backlight control and a possible RGBA light
+    to wake up with a sunrise simulation. The PWM pins on both Raspberry Pi and
+    BananaPi are scarce an used for other functions, e.g. I2S. Software PWM is
+    not really a nice option so I was willing to spend some 2.5$ for a nice I2C
+    chip that integrates nicely with the Linux LED driver framework
 
-<img src="/img/news/DigitalRooster-Mk2a.webp" alt="rendering of red PCB"
-	title="second attempt pcb" class="image small" />
+-   Integrated circuitry for the Grayhill rotary encoder that requires voltage
+    dividers and a debounce for the push button
+
+-   The possiblity to connect an external I2C device. I have a APDS9660 gesture
+    and light sensor in mind for dynamic back-light control or gesture snooze.
+The Mk3b is also compatible with both Raspberry Pi *and* Banana Pi M2 Zero. So
+you have a wider choice of more powerful hardware!
+
+**Note:** The Mk3b-extension board is a module without independent function and
+is exclusively intended for development purposes under laboratory conditions.
+For use or operation specialist knowledge is required. Please also read the
+[safety and environmental notes](/pages/safety)
+
+For details please refer to the **[schematic-mk3b.pdf](/schematic-mk3b.pdf)**
+and the product **[mk3b landing page mk3b](/mk3b)**
+
+## Other Parts
+
+To build your DigitalRooster you will need some more parts in addition to the
+[extension board](#digitalrooster-mk3b-extension-board):
+
+-   Raspberry Pi Zero W (without soldered header)
+
+-   Adafruit [PiTFT2.8" capacitive touch](https://www.adafruit.com/product/1983)\
+    **Note:** there are two types sold under the same name: \
+    one with buttons (Mfg Part No. [2423](https://www.adafruit.com/product/2423))
+    and without buttons (Mfg  Part No. [1983](https://www.adafruit.com/product/1983))\
+    I use the 1983 without buttons [(Digikey 1528-1423-ND)](https://www.digikey.com/product-detail/en/adafruit-industries-llc/1983/1528-1423-ND/5699178)
+
+-   Long (15mm) 2.54mm connection header to stack the extension boards on the 
+    Raspberry Pi [(Digikey 3M156504-72-ND)](https://www.digikey.de/products/de?keywords=3M156504-72-ND)
+
+-   Grayhill rotary encoder [61C11-01-08-02](http://lgrws01.grayhill.com/web1/images/ProductImages/I-21-22.pdf)
+    [(Digikey GH6102-ND)](https://www.digikey.de/products/de?keywords=61C11-01-08-02)
+
+-   Kilo International knurled knob OEDNI-90-3-5
+    [(Digikey 226-4201-ND)](https://www.digikey.de/products/de?keywords=OEDNI-90-3-5)
+
+-   Some small speakers ca.3-5W 4&#x2126; for instance [Adafruit
+    Speaker](https://www.adafruit.com/product/1314)
+
+I added links to digikey.com, but they serve only as reference you can get them
+wherever you like. I do not have any deal with Adafruit or digikey, I just use
+it because it is convenient.
+
+The total cost is about US$ 120 (on digikey) while the rotary encoder alone
+accounts for 25US$. You can use different components but these are the ones I
+have tested so far.
+
+**If you find a nicer rotary-encoder with push-button that turns even smoother
+please let me know! I would like one that turns 'notch-less'**
+
+### Assembly
+It is not that hard but maybe I will create a photo-guide.
+
+Make sure you [solder the correct jumpers](/mk3b#solder-jumpers)
 
 ## Casing
 
@@ -69,5 +121,5 @@ a wider choice of more powerful hardware!
 
 The housing is printed on a Prusa MK3. You can find the
 [STL-files here](/parts-stl.7z). \
-__Make sure you scale the housing with about 0.5%__ so the side panels fit in
+*Make sure you scale the housing with about 0.5%* so the side panels fit in
 otherwise you will have problems mounting.
