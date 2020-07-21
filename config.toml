@@ -53,6 +53,10 @@ theme = "forty"
       url = "pages/software"
 
     [[params.navigation.links]]
+      name = "Safety Instructions"
+      url = "pages/safety"
+
+    [[params.navigation.links]]
       name = "About this Website"
       url = "pages/about"
 
