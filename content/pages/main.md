@@ -71,7 +71,7 @@ __I think it is mature enough to share it with *you*__
 Look at the section [software](/pages/software) and clone the main project from
 [github](https://github.com/truschival/DigitalRoosterGui) you can build the
 project on your host PC. If you like what you see look at the
-[hardware](/pages/hardware) and run it on your Raspberry Pi.
+[hardware](/pages/hardware) and run it on your Raspberry Pi or Banana Pi.
 
 If you are not into coding look in the the section
 [contributing](/pages/contributing) there are plenty of ways of collaboration.

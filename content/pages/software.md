@@ -36,10 +36,12 @@ from your professional hints - so tell me what can be improved and how!
 
 DigitalRooster consists of a few components: a linux kernel, device tree,
 libraries, QT and last but not least the graphical interface DigitalRoosterGUI.
-It is built using buildroot. Buildroot makes it easy to create a root file
-system for an SD-card for your DigitalRooster.
+It is built using [Buildroot](https://www.buildroot.org). \
+Buildroot build all required components (Linux kernel, device tree, libraries
+etc.)  and compiles them in root file system image that you can copy on an
+SD-card for your DigitalRooster.
 
-### DigitalRoosterGui (PC and Embedded)
+### DigitalRoosterGui (Host and Embedded target build)
 
 The graphical user interface. You can play around with most functionality on
 your host computer. To build and run DigitalRoosterGui you need:
@@ -47,15 +49,16 @@ your host computer. To build and run DigitalRoosterGui you need:
 1. The source code. Clone or download it from [github.com/truschival/DigitalRoosterGui](github.com/truschival/DigitalRoosterGui)
 2. [CMake >3.10](https://cmake.org/download/)
 3. [QT >5.11](https://www.qt.io/download)
-4. A recent C++ compiler gcc or Microsoft VisualStudio
+4. A recent C++14 compiler such as gcc or Microsoft VisualStudio
 
-Follow the [Readme.md](https://github.com/truschival/DigitalRoosterGui/blob/develop/README.md)
+Follow the [README.md](https://github.com/truschival/DigitalRoosterGui/blob/develop/README.md)
 for host-builds.
 
 ### Embedded Target
 
-If you want to run it on your Raspberry Pi you can compile it on the target
-using a Raspian image following the steps for host builds.
+If you want to run it on your Raspberry Pi you can (possibly?) compile it on the
+target using a Raspian image following the steps for host builds - I have never
+done it like this....
 
 If you want to create a root filesystem for your target you can do that easily
 using [Buildroot](https://buildroot.org/) that provides the infrastructure like
@@ -67,4 +70,4 @@ adds the DigitalRoosterGui package, target-hardware specific configurations and
 patches to other packages.
 
 Creating a root file system for an SD-Card is described in the
-[Readme.md](https://github.com/truschival/buildroot_digitalrooster/blob/master/Readme.md)
+[README.md](https://github.com/truschival/buildroot_digitalrooster/blob/master/README.md)
