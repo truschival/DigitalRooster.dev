@@ -22,8 +22,9 @@ never designed a PCB this was my chance to learn electronic design!
 
 ## DigitalRooster-Mk3b extension board
 
-<img src="/img/DigitalRooster-mk3b.webp" alt="3D Rendering of PCB assembly"
-	title="DigitalRooster-mk3b" class="image small" />
+<img src="/img/news/mk3b-assembled.webp" 
+     alt="fully assembled PCB of DigitalRooster mk3b" 
+	 title="DigitalRooster-mk3b" class="image small" />
 
 The hardware design started in 2019. I was ordering PCBs and imagined hand
 assembly for the prototypes. Not only was the design unnecessarily complicated,
@@ -34,7 +35,7 @@ hardware engineer would find many possibilities for improvement, especially for
 layout and component costs. But I am happy so far. With the Mk3b I finally got
 the board I wanted.  \
 I also think it is ready for mass production and to share
-it with you on tindie.com!
+it with you on [tindie.com](https://www.tindie.com/products/21067/)!
 
 ### Features
 -   Three Channel audio using a 3W MAX98357A I2S driver. Since this IC is a
@@ -62,6 +63,10 @@ it with you on tindie.com!
 
 -   The possiblity to connect an external I2C device. I have a APDS9660 gesture
     and light sensor in mind for dynamic back-light control or gesture snooze.
+
+-   Last but not least: a separate header for UART console since when assembled
+    it is hard to access the UART of the Raspberry Pi.
+
 The Mk3b is also compatible with both Raspberry Pi *and* Banana Pi M2 Zero. So
 you have a wider choice of more powerful hardware!
 
@@ -72,6 +77,11 @@ For use or operation specialist knowledge is required. Please also read the
 
 For details please refer to the **[schematic-mk3b.pdf](/schematic-mk3b.pdf)**
 and the product **[mk3b landing page mk3b](/mk3b)**
+
+### Where to buy
+
+Currently I am selling a kit that requires some soldering on 
+[tindie.com](https://www.tindie.com/products/21067/)!
 
 ## Other Parts
 

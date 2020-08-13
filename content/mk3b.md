@@ -8,8 +8,9 @@ categories:
    - "hardware"
 ---
 
-<img src="/img/DigitalRooster-mk3b.webp" alt="3D Rendering of PCB assembly"
-	title="DigitalRooster-mk3b" class="image small" />
+<img src="/img/news/mk3b-assembled.webp" 
+     alt="fully assembled PCB of DigitalRooster mk3b" 
+	 title="DigitalRooster-mk3b" class="image small" />
 
 ## Introduction
 
@@ -36,6 +37,10 @@ title="schematic digitalrooster-mk3b" class="image small" /> </a>
 **Warning:** Soldering can cause injuries and requires some skills. The solder
 iron is hot and solder fumes are hazardous! Please also read the [safety and
 environmental notes](/pages/safety)
+
+
+<img src="/img/news/mk3b-back.webp" alt="PCB bottom side with solder jumpers"
+	title="DigitalRooster-mk3b back" class="image small" />
 
 ### Raspberry Pi
 
