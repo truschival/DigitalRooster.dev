@@ -68,7 +68,10 @@ it with you on [tindie.com](https://www.tindie.com/products/21067/)!
     it is hard to access the UART of the Raspberry Pi.
 
 The Mk3b is also compatible with both Raspberry Pi *and* Banana Pi M2 Zero. So
-you have a wider choice of more powerful hardware!
+you have a wider choice of more powerful hardware! However Banana Pi M2 Zero
+performance is sub-par. It takes ages for the display to react to touch events.
+I don't consider the Banana Pi version production ready yet. The Raspberry Pi 
+configuration works really nicely.
 
 **Note:** The Mk3b-extension board is a module without independent function and
 is exclusively intended for development purposes under laboratory conditions.

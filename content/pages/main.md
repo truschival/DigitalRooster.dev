@@ -54,15 +54,11 @@ independently. The QML GUI came next.
 Porting it to embedded Linux with Buildroot on Raspberry Pi was relatively easy.
 I had past experience with board support packages and buildroot from previous
 projects. Playing around with Raspberry Pi Zero W using framebuffer copy (fbcp)
-the performance was o.k. but not overwhelming. I am working on a port to 
-Banana Pi M2 Zero with quad-core CPU and a MALI GPU. On Mali/Lima there are 
-some quirks with QT shaders but we will figure it out.
-
-At the moment I am working on an extension circuit board that will combine all
-audio DAC, amplifier, realtime clock and some PWM on one board. If the hardware
-works and can be produced at a reasonalble price I intend to make it available
-to you. Stay tuned.  In the mean time tou can already build your own
-DigitalRooster with components available from Adafruit.
+the performance was o.k. but not overwhelming. I am working on a port to Banana
+Pi M2 Zero with quad-core CPU and a MALI GPU. On Mali/Lima there are some quirks
+with QT shaders but we will figure it out. The performance on Banana Pi is
+currently sub-par. It takes ages for the display to react to a touch event.
+The Raspberry Pi solution is working like a charm.
 
 __I think it is mature enough to share it with *you*__ 
 
