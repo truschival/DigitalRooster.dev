@@ -24,9 +24,26 @@ out the others to some friends for analysis. It seems there is no hardware bug
 so far.
 
 Now is the time to prepare how to produce a larger batch and sell it on
-[tindie.com](https://www.tindie.com/products/21067/). I also have not yet an
-idea on packaging.
+[tindie.com](https://www.tindie.com/products/21067/).  Turns out this raises
+some burocratic issues. Most bothering are VAT, or Mehrwertsteuer as we call it
+in Germany. When selling to a end customer it is pretty straight forward, I will
+charge 19% German VAT and give the tax to the german government. If I sell to a
+business the receive will pay the VAT. Unfortunately Tindie does not have the
+option to state a price without VAT - the tindie-price incldudes VAT.
 
-Stay tuned.
+Fine for the private customer, confusing for the business customer, annoying for
+me: Tindie charges 5% sales fee + 3-4% payment processing fee on the total price
+including shipping. This means Tindie charges fee on taxes - not sure how I will
+do the accounting for this. I will have to ask.
+
+I also have no clear idea on packaging and shipping. Apparently Corona Virus
+affects the postal service. DHL now does no longer ship "Päckchen XS" i.e. small
+packages to the US. This drives shipping costs beyond reasonable...
+
+<img src="/img/news/Corona-DHL-USA.webp"
+     alt="limited service to the US"
+	 title="USPS has limited service" class="image small" />
+
+https://www.dhl.de/de/privatkunden/kampagnenseiten/coronavirus.html#usa
 
 
