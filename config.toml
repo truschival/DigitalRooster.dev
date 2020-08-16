@@ -41,23 +41,23 @@ theme = "forty"
       url = "#"
 
     [[params.navigation.links]]
-      name = "Contribuiting"
-      url = "pages/contributing"
-
-    [[params.navigation.links]]
       name = "Hardware"
       url = "pages/hardware"
+
+    [[params.navigation.links]]
+      name = "Assembly"
+      url = "pages/assembly"
+
+     [[params.navigation.links]]
+      name = "Contributing"
+      url = "pages/contributing"
 
     [[params.navigation.links]]
       name = "Software"
       url = "pages/software"
 
     [[params.navigation.links]]
-      name = "Where to order"
-      url = "pages/commercial"
-
-    [[params.navigation.links]]
-      name = "Safety Instructions"
+      name = "Safety and Environment"
       url = "pages/safety"
 
     [[params.navigation.links]]
@@ -212,4 +212,3 @@ theme = "forty"
       hardWraps = false
       unsafe = true
       xHTML = false
-

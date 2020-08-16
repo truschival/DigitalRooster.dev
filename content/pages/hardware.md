@@ -12,8 +12,8 @@ draft: false
 
 The initial prototype was built using a Raspberry Pi Zero an Adafruit PiTFT and
 Speaker Bonnet plus some circuitry on a prototyping PCB. This works but had a
-range of serious drawbacks. For instance the Speaker Bonnet does not have a gpio
-connected to the shutdown pin of the codec which leads to a nasty popping noise
+range of serious drawbacks. For instance the Speaker Bonnet does not have a GPIO
+connected to the shutdown pin of the codex which leads to a nasty popping noise
 when changing tracks. I also required some circuitry to adapt the voltage levels
 of the rotary encoder to 3.3V, I also wanted a real time clock.
 
@@ -29,7 +29,7 @@ never designed a PCB this was my chance to learn electronic design!
 The hardware design started in 2019. I was ordering PCBs and imagined hand
 assembly for the prototypes. Not only was the design unnecessarily complicated,
 it also had a pretty bad layout and I had to admit my soldering skills do more
-damage than good. PCBWays turnkey assembly was the way to go. However I still
+damage than good. Pcbway's turnkey assembly was the way to go. However I still
 needed two iterations to get what I wanted. Probably an experienced electronics
 hardware engineer would find many possibilities for improvement, especially for
 layout and component costs. But I am happy so far. With the Mk3b I finally got
@@ -47,21 +47,21 @@ it with you on [tindie.com](https://www.tindie.com/products/21067/)!
     there is no popping noise when changing tracks
 
 -   A BQ32000 Real Time Clock chip with trickle-charge circuit that charges a
-    200mF SuperCap. Although the software synchronizes time using NTP I wanted a
+    200mF Super-Cap. Although the software synchronizes time using NTP I wanted a
     Real Time Clock in case the network is down. Also having a the correct time
     during boot makes logging a lot more insightful and avoids TLS error for
     certificates that are not yet valid on Jan 1st of 1970...
 
--   A TLC59208F PWM LED driver for backlight control and a possible RGBA light
+-   A TLC59208F PWM LED driver for back-light control and a possible RGBA light
     to wake up with a sunrise simulation. The PWM pins on both Raspberry Pi and
-    BananaPi are scarce an used for other functions, e.g. I2S. Software PWM is
+    Banana-Pi are scarce an used for other functions, e.g. I2S. Software PWM is
     not really a nice option so I was willing to spend some 2.5$ for a nice I2C
     chip that integrates nicely with the Linux LED driver framework
 
 -   Integrated circuitry for the Grayhill rotary encoder that requires voltage
     dividers and a debounce for the push button
 
--   The possiblity to connect an external I2C device. I have a APDS9660 gesture
+-   The possibility to connect an external I2C device. I have a APDS9660 gesture
     and light sensor in mind for dynamic back-light control or gesture snooze.
 
 -   Last but not least: a separate header for UART console since when assembled
@@ -91,7 +91,8 @@ Currently I am selling a kit that requires some soldering on
 To build your DigitalRooster you will need some more parts in addition to the
 [extension board](#digitalrooster-mk3b-extension-board):
 
--   Raspberry Pi Zero W (without soldered header)
+-   [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)
+    (without soldered header)
 
 -   Adafruit [PiTFT2.8" capacitive touch](https://www.adafruit.com/product/1983)\
     **Note:** there are two types sold under the same name: \
@@ -115,17 +116,17 @@ I added links to digikey.com, but they serve only as reference you can get them
 wherever you like. I do not have any deal with Adafruit or digikey, I just use
 it because it is convenient.
 
-The total cost is about US$ 120 (on digikey) while the rotary encoder alone
-accounts for 25US$. You can use different components but these are the ones I
-have tested so far.
+The total cost is about 120 US$(on digikey) while the rotary encoder alone
+accounts for 25 US$. You can use different components but these are the ones I
+have successfully used so far.
 
 **If you find a nicer rotary-encoder with push-button that turns even smoother
 please let me know! I would like one that turns 'notch-less'**
 
-### Assembly
-It is not that hard but maybe I will create a photo-guide.
+## Assembly
 
-Make sure you [solder the correct jumpers](/mk3b#solder-jumpers)
+I created a photo-sequence with some hints on how to assemble the electronic
+parts see the [page assembly](/pages/assembly)
 
 ## Casing
 

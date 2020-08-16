@@ -8,15 +8,18 @@ categories:
    - "hardware"
 ---
 
-<img src="/img/news/mk3b-assembled.webp" 
-     alt="fully assembled PCB of DigitalRooster mk3b" 
+<img src="/img/news/mk3b-assembled.webp"
+     alt="fully assembled PCB of DigitalRooster mk3b"
 	 title="DigitalRooster-mk3b" class="image small" />
 
 ## Introduction
 
+You can get the DigitalRooster-Mk3b from
+[tindie.com](https://www.tindie.com/products/21067/)!
+
 The hardware is designed to works both with Raspberry Pi Zero W and Banana Pi M2
-Zero. To work with any of these two boards requires
-[soldering some jumpers](#solder-jumpers).
+Zero. To work with any of these two boards requires [soldering some
+jumpers](#solder-jumpers).
 
 **Note:** The Mk3b-extension board is a module without independent function, and
 is exclusively intended for development or education purposes under laboratory
@@ -49,10 +52,14 @@ and **JP3** to position **1-2** (the small triangle marks pad 1)
 
 You **must not solder JP4** This jumper connects the back-light dimming to GPIO
 pin 12 which Raspberry Pi unfortunately uses for I2S bit clock. You have to
-solder a wire from J5 pin 6 to the backlight pwm control input of your display.
+solder a wire from J5 pin 6 to the back-light PWM control input of your display.
 Unfortunately the Raspberry Pi SoC BCM2708 has few PWM lines and
 
 Do not solder JP1.
+
+<img src="/img/assembly/solderjumpers-rpi.webp"
+     alt="Solder jumpers soldered for raspberry Pi"
+	 title="Raspberry Pi Solder Jumpers" class="image small" />
 
 ### Banana Pi
 
@@ -68,6 +75,10 @@ You must **solder JP1**. This jumper is a workaround for Banana Pi. The
 Allwinner H2+ SoC unfortunately has no IRQ line on PC4. Adafruit designed the
 PiTFT to use pin 18 as IRQ for the touch sensor. This jumper maps PC4 (pin 18)
 to PL4 (pin 26) which has interrupt functionality.
+
+<img src="/img/assembly/solderjumpers-bpi.webp"
+     alt="Solder jumpers soldered for Banana Pi"
+	 title="Banana Pi Solder Jumpers" class="image small" />
 
 ## FAQ
 
