@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b0fa50d9-1177-4ccf-bed2-e8e42dc785cd/deploy-status)](https://app.netlify.com/sites/dazzling-edison-8a08cf/deploys)
+
 # DigitalRooster.dev
 
 Source repository for website [www.digitalrooster.dev](https://www.digitalrooster.dev) 
